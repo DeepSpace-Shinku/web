@@ -15,7 +15,6 @@ permissions:
   pages: write
   id-token: write
 
-# Ensure only one deployment happens at a time
 concurrency:
   group: "pages"
   cancel-in-progress: false
@@ -37,7 +36,7 @@ jobs:
       - name: Upload HTML file
         uses: actions/upload-pages-artifact@v3
         with:
-          # Specify the path to your HTML file, for example 'main.html'
+          # Ensure to pass the correct path to the single file
           path: './main.html'
 
       - name: Deploy to GitHub Pages
