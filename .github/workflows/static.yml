@@ -37,7 +37,7 @@ jobs:
         uses: actions/upload-pages-artifact@v3
         with:
           # Ensure to pass the correct path to the single file
-          path: './main.html'
+          path: './'
 
       - name: Deploy to GitHub Pages
         id: deployment
